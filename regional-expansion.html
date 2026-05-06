@@ -4,144 +4,69 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Regional Expansion | Esports Infrastructure</title>
-
-  <!-- Google Font -->
+  <meta property="og:title" content="Regional Expansion — S.T.A.S.I.S.">
+  <meta property="og:description" content="Infrastructure-first development of professional esports beyond traditional coastal hubs.">
+  <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap" rel="stylesheet">
-
+  <link rel="stylesheet" href="style.css">
+  <script src="components.js" defer></script>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Teko', sans-serif;
-      background: linear-gradient(to bottom, #000000, #1a1a1a);
-      color: #d1d5db;
-      text-align: center;
-    }
-	:root{
-  	--primary:#60a5fa;
-  	--muted:#9ca3af;
-	}	
     .container {
       max-width: 900px;
       margin: 0 auto;
       padding: 60px 20px;
     }
-
     h1 {
       font-size: 4rem;
-      color: #60a5fa;
+      color: var(--primary);
       margin-bottom: 0.3em;
     }
-
     h2 {
       font-size: 2.4rem;
-      color: #93c5fd;
+      color: var(--highlight);
       margin-top: 70px;
       margin-bottom: 0.5em;
     }
-
     p {
       font-size: 1.4rem;
       line-height: 1.6;
       margin-bottom: 1.2em;
     }
-
     ul {
       list-style: none;
       padding: 0;
       margin: 0;
       text-align: left;
     }
-
     li {
       font-size: 1.3rem;
       margin-bottom: 12px;
     }
-
     .section {
       margin-top: 80px;
     }
-
     .card {
-      background-color: #1f2937;
-      border: 1px solid #3b82f6;
+      background-color: var(--panel);
+      border: 1px solid var(--border);
       border-radius: 12px;
       padding: 30px 25px;
       text-align: left;
       margin-top: 40px;
-    }
-
-    .link {
-      display: inline-block;
-      margin-top: 25px;
-      font-size: 1.1rem;
-      color: #60a5fa;
-      text-decoration: none;
-    }
-
-    .link:hover {
-      text-decoration: underline;
-    }
-
-    footer{
-      margin-top: 70px;
-      padding: 40px 20px;
-      background-color: #111;
-      color: var(--muted);
-      font-size: 1rem;
-      text-align: center;
-      border-top: 1px solid #3f3f46;
-    }
-    .footer-logo{
-      max-width: 150px;
-      margin: 0 auto 10px;
-      filter: drop-shadow(0 0 12px rgba(96,165,250,.12));
-    }
-    .social-icons{
-      margin: 18px 0 10px;
-    }
-    .social-icons a{
-      margin: 0 10px;
-      display:inline-block;
-      width: 30px;
-      height: 30px;
-      filter: invert(59%) sepia(18%) saturate(1632%) hue-rotate(179deg) brightness(92%) contrast(86%);
-    }
-    .social-icons img{ width:100%; height:auto; }
-    .contact-info{
-      margin-top: 6px;
-      color: var(--muted);
-    }
-    .contact-info a{
-      color: var(--primary);
-      text-decoration: none;
-    }
-    .contact-info a:hover{ text-decoration: underline; }
-    .footer-note{
-      font-size: .9rem;
-      color: #6b7280;
-      margin-top: 10px;
-    }
-
-    @media (max-width: 860px){
-      .span-6{ grid-column: span 12; }
-      .hero h1{ font-size: 2.7rem; }
-      .site-name{ font-size: 2.8rem; }
     }
   </style>
 </head>
 <body>
 
   <div class="container">
-
-    <!-- HERO -->
     <h1>Regional League Expansion</h1>
     <p>
       Infrastructure-first development of professional esports beyond traditional coastal hubs.
     </p>
 
-    <!-- CONTEXT -->
+    <div id="site-nav"></div>
+
     <div class="section">
       <h2>Current Landscape</h2>
       <p>
@@ -154,7 +79,6 @@
       </p>
     </div>
 
-    <!-- MIDWEST -->
     <div class="section">
       <h2>Midwest as a Proof Market</h2>
 
@@ -173,13 +97,12 @@
       </p>
     </div>
 
-    <!-- Central United States -->
     <div class="section">
-      <h2>Extension Into Central United States</h2>
+      <h2>Extension Into Central America</h2>
 
       <p>
         As esports participation continues to expand globally, similar growth patterns are emerging
-        in Central United States. These regions show competitive interest and player development potential,
+        in Central America. These regions show competitive interest and player development potential,
         but limited access to professional league pathways.
       </p>
 
@@ -193,7 +116,6 @@
       </div>
     </div>
 
-    <!-- APPROACH -->
     <div class="section">
       <h2>Infrastructure-First Approach</h2>
 
@@ -212,7 +134,6 @@
       </p>
     </div>
 
-    <!-- STATUS -->
     <div class="section">
       <h2>Current Status</h2>
       <p>
@@ -223,26 +144,9 @@
         No formal league deployment is underway at this time.
       </p>
     </div>
-
-    <!-- NAV -->
-    <a href="index.html" class="link">← Back to Home</a>
-
   </div>
 
-  <footer>
-    <img src="logo.png" alt="S.T.A.S.I.S. Logo" class="footer-logo">
-    <div class="social-icons">
-      <a href="#"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" alt="TikTok"></a>
-      <a href="#"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram"></a>
-      <a href="#"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" alt="X"></a>
-      <a href="#"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="YouTube"></a>
-    </div>
-    <div class="contact-info">
-      <p>Email: <a href="mailto:2024mmorgan@gmail.com">2024mmorgan@gmail.com</a></p>
-      <p>Phone: <a href="tel:+16414810176">(641) 481-0176</a></p>
-    </div>
-    <p class="footer-note">© 2025</p>
-  </footer>
+  <div id="site-footer"></div>
 
 </body>
 </html>

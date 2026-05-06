@@ -4,105 +4,37 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Thank You - S.T.A.S.I.S.</title>
-  <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="components.js" defer></script>
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Teko', sans-serif;
-      background: linear-gradient(to bottom, #000000, #1a1a1a);
-      color: #d1d5db;
-      text-align: center;
-    }
     .container {
       padding: 100px 20px;
+      max-width: 700px;
+      margin: 0 auto;
     }
     h1 {
       font-size: 4rem;
-      color: #60a5fa;
+      color: var(--primary);
       margin-bottom: 0.5em;
     }
     p {
       font-size: 1.5rem;
-      color: #93c5fd;
+      color: var(--highlight);
       margin-bottom: 2em;
-    }
-    .button {
-      background: transparent;
-      border: 1px solid #3b82f6;
-      color: #60a5fa;
-      padding: 12px 24px;
-      font-size: 1.25rem;
-      cursor: pointer;
-      border-radius: 8px;
-      transition: background 0.3s ease;
-    }
-    .button:hover {
-      background: #3b82f6;
-      color: white;
-      box-shadow: 0 0 12px #60a5fa;
-    }
-    footer {
-      margin-top: 60px;
-      padding: 40px 20px;
-      background-color: #111;
-      color: #9ca3af;
-      font-size: 1rem;
-      text-align: center;
-      border-top: 1px solid #3f3f46;
-    }
-    .footer-logo {
-      max-width: 150px;
-      margin: 0 auto 10px;
-    }
-    .social-icons {
-      margin: 20px 0;
-    }
-    .social-icons a {
-      margin: 0 10px;
-      display: inline-block;
-      width: 30px;
-      height: 30px;
-      filter: invert(59%) sepia(18%) saturate(1632%) hue-rotate(179deg) brightness(92%) contrast(86%);
-    }
-    .social-icons img {
-      width: 100%;
-      height: auto;
-    }
-    .contact-info {
-      margin-top: 10px;
-      color: #9ca3af;
-    }
-    .contact-info a {
-      color: #60a5fa;
-      text-decoration: none;
-    }
-    .footer-note {
-      font-size: 0.85rem;
-      color: #6b7280;
-      margin-top: 10px;
     }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Thank You</h1>
-    <p>Your message has been received. We’ll get back to you from the shadows.</p>
+    <div id="site-nav"></div>
+    <p>Your message has been received. We'll get back to you from the shadows.</p>
     <a href="index.html" class="button">Back to Home</a>
   </div>
-  <footer>
-    <img src="logo.png" alt="S.T.A.S.I.S. Logo" class="footer-logo">
-    <div class="social-icons">
-      <a href="#"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" alt="TikTok"></a>
-      <a href="#"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram"></a>
-      <a href="#"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" alt="X"></a>
-      <a href="#"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="YouTube"></a>
-    </div>
-    <div class="contact-info">
-      <p>Email: <a href="mailto:contact@placeholder.com">contact@placeholder.com</a></p>
-      <p>Phone: <a href="tel:+10000000000">(000) 000-0000</a></p>
-    </div>
-    <p class="footer-note">© 2025 S.T.A.S.I.S. | Operating in the shadows so you can shine.</p>
-  </footer>
+
+  <div id="site-footer"></div>
 </body>
 </html>

@@ -4,31 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Work Archive | Montana Morgan</title>
-
-  <!-- Google Font -->
+  <meta property="og:title" content="Work Archive — S.T.A.S.I.S.">
+  <meta property="og:description" content="Searchable record of esports operations, broadcast systems, and production work.">
+  <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap" rel="stylesheet">
-
+  <link rel="stylesheet" href="style.css">
+  <script src="components.js" defer></script>
   <style>
-    :root{
-      --bg1:#000000;
-      --bg2:#1a1a1a;
-      --panel:#1f2937;
-      --border:#3b82f6;
-      --primary:#60a5fa;
-      --highlight:#93c5fd;
-      --text:#d1d5db;
-      --muted:#9ca3af;
-    }
-    *{ box-sizing:border-box; }
-    body{
-      margin:0;
-      font-family:'Teko', sans-serif;
-      background: linear-gradient(to bottom, var(--bg1), var(--bg2));
-      color: var(--text);
-      text-align:center;
-    }
     .container{
       max-width: 1000px;
       margin: 0 auto;
@@ -44,31 +28,6 @@
       color: var(--muted);
       margin: 0 0 1.5em;
     }
-    nav{
-      margin: 18px 0 38px;
-      display:flex;
-      gap:12px;
-      justify-content:center;
-      flex-wrap:wrap;
-    }
-    .navbtn{
-      display:inline-block;
-      border: 1px solid var(--border);
-      color: var(--primary);
-      text-decoration:none;
-      padding: 10px 18px;
-      border-radius: 10px;
-      font-size: 1.25rem;
-      background: transparent;
-      transition: transform .12s ease, background .2s ease, color .2s ease, box-shadow .2s ease;
-    }
-    .navbtn:hover{
-      background: var(--border);
-      color: #ffffff;
-      box-shadow: 0 0 14px rgba(96,165,250,.35);
-      transform: translateY(-1px);
-    }
-
     .controls{
       margin: 0 auto 26px;
       max-width: 850px;
@@ -147,7 +106,6 @@
       box-shadow: 0 0 10px rgba(96,165,250,.25);
       transform: translateY(-1px);
     }
-
     .results-meta{
       max-width: 850px;
       margin: 10px auto 18px;
@@ -155,7 +113,6 @@
       color: var(--muted);
       font-size: 1.2rem;
     }
-
     .list{
       max-width: 850px;
       margin: 0 auto;
@@ -218,54 +175,9 @@
       color: var(--highlight);
       font-weight: 600;
     }
-
-    footer{
-      margin-top: 70px;
-      padding: 40px 20px;
-      background-color: #111;
-      color: var(--muted);
-      font-size: 1rem;
-      text-align: center;
-      border-top: 1px solid #3f3f46;
+    @media (max-width: 640px){
+      .controls-grid{ grid-template-columns: 1fr; }
     }
-    .footer-logo{
-      max-width: 150px;
-      margin: 0 auto 10px;
-      filter: drop-shadow(0 0 12px rgba(96,165,250,.12));
-    }
-    .social-icons{
-      margin: 18px 0 10px;
-    }
-    .social-icons a{
-      margin: 0 10px;
-      display:inline-block;
-      width: 30px;
-      height: 30px;
-      filter: invert(59%) sepia(18%) saturate(1632%) hue-rotate(179deg) brightness(92%) contrast(86%);
-    }
-    .social-icons img{ width:100%; height:auto; }
-    .contact-info{
-      margin-top: 6px;
-      color: var(--muted);
-    }
-    .contact-info a{
-      color: var(--primary);
-      text-decoration: none;
-    }
-    .contact-info a:hover{ text-decoration: underline; }
-    .footer-note{
-      font-size: .9rem;
-      color: #6b7280;
-      margin-top: 10px;
-    }
-
-    @media (max-width: 860px){
-      .span-6{ grid-column: span 12; }
-      .hero h1{ font-size: 2.7rem; }
-      .site-name{ font-size: 2.8rem; }
-    }
-  </style>
-
   </style>
 </head>
 <body>
@@ -273,12 +185,7 @@
     <h1>Work Archive</h1>
     <p class="subtitle">Searchable record of esports operations, broadcast systems, and production work.</p>
 
-    <nav>
-      <a class="navbtn" href="index.html">Home</a>
-      <a class="navbtn" href="archives.html">Archive</a>
-      <a class="navbtn" href="resume.html">Resume</a>
-      <a class="navbtn" href="contact.html">Contact</a>
-    </nav>
+    <div id="site-nav"></div>
 
     <div class="controls" aria-label="Archive filters">
       <div class="controls-grid">
@@ -326,7 +233,6 @@
 
     <div class="list" id="archiveList">
 
-      <!-- Item: MCC Esports Tournament -->
       <article class="item" data-year="2024" data-tags="operations broadcast event">
         <a class="title" href="#" title="Case study coming soon">Collegiate Recruitment Tournament — MCC Esports</a>
         <div class="meta">
@@ -341,7 +247,6 @@
         </div>
       </article>
 
-      <!-- Item: Clarke Program -->
       <article class="item" data-year="2024" data-tags="program operations broadcast">
         <a class="title" href="#" title="Case study coming soon">High School Esports Program — Clarke Community</a>
         <div class="meta">
@@ -356,21 +261,19 @@
         </div>
       </article>
 
-      <!-- Item: Veterans Interview (external) -->
       <article class="item" data-year="2025" data-tags="media event">
         <a class="title" href="https://www.timesrepublican.com/news/todays-news/2025/03/ivh-ivccd-and-sen-ernsts-office-team-up-to-record-veteran-interviews-for-library-of-congress/" target="_blank" rel="noopener">Assistant Videographer — Veterans Interview Project</a>
         <div class="meta">
           <span class="pill">2025</span>
           <span class="pill">Role: Assistant Videographer</span>
         </div>
-        <p class="desc">Production support for recorded veteran interviews in coordination with Sen. Ernst’s office; capture and on-site production workflow.</p>
+        <p class="desc">Production support for recorded veteran interviews in coordination with Sen. Ernst's office; capture and on-site production workflow.</p>
         <div class="spec">
           <span><b>Systems:</b> Capture · On-site workflow</span>
           <span><b>Tags:</b> Media · Event</span>
         </div>
       </article>
 
-      <!-- Item: MCC Film Festival / Red Carpet -->
       <article class="item" data-year="2025" data-tags="event operations media">
         <a class="title" href="https://www.timesrepublican.com/news/todays-news/2025/03/creativity-celebrated-during-first-annual-mcc-film-festival/" target="_blank" rel="noopener">Event Producer — MCC Red Carpet / Film Festival</a>
         <div class="meta">
@@ -384,7 +287,6 @@
         </div>
       </article>
 
-      <!-- Item: Placeholder award (optional) -->
       <article class="item" data-year="2025" data-tags="award">
         <a class="title" href="#" title="Replace with real link or remove">Recognition / Award (Placeholder)</a>
         <div class="meta">
@@ -401,20 +303,7 @@
     </div>
   </div>
 
-  <footer>
-    <img src="logo.png" alt="S.T.A.S.I.S. Logo" class="footer-logo">
-    <div class="social-icons">
-      <a href="#"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" alt="TikTok"></a>
-      <a href="#"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram"></a>
-      <a href="#"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" alt="X"></a>
-      <a href="#"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="YouTube"></a>
-    </div>
-    <div class="contact-info">
-      <p>Email: <a href="mailto:2024mmorgan@gmail.com">2024mmorgan@gmail.com</a></p>
-      <p>Phone: <a href="tel:+16414810176">(641) 481-0176</a></p>
-    </div>
-    <p class="footer-note">© 2025</p>
-  </footer>
+  <div id="site-footer"></div>
 
   <script>
     const searchInput = document.getElementById('searchInput');
@@ -427,11 +316,6 @@
     const resultsMeta = document.getElementById('resultsMeta');
 
     let activeTags = [];
-
-    function normalizeYearValue(itemYear) {
-      // Supports entries like "2020–2024" in UI pill but dataset should be a single year.
-      return itemYear;
-    }
 
     function updateURL() {
       const params = new URLSearchParams();
@@ -467,7 +351,6 @@
       const year = yearSelect.value;
       const sort = sortSelect.value;
 
-      // Filter
       const filtered = items.filter(item => {
         const text = item.innerText.toLowerCase();
         const itemTags = (item.dataset.tags || '').split(' ').filter(Boolean);
@@ -480,7 +363,6 @@
         return matchesSearch && matchesYear && matchesTagSet;
       });
 
-      // Sort
       const sorted = filtered.sort((a, b) => {
         const ay = parseInt(a.dataset.year || '0', 10);
         const by = parseInt(b.dataset.year || '0', 10);
@@ -491,17 +373,14 @@
         return at.localeCompare(bt);
       });
 
-      // Render (reorder DOM)
       sorted.forEach(el => list.appendChild(el));
 
-      // Show/hide
       items.forEach(item => item.style.display = 'none');
       sorted.forEach(item => item.style.display = 'block');
 
       resultsMeta.textContent = `Showing ${sorted.length} item${sorted.length === 1 ? '' : 's'}`;
     }
 
-    // Tag interactions
     tagButtons.forEach(btn => {
       btn.addEventListener('click', () => {
         const tag = btn.getAttribute('data-tag');

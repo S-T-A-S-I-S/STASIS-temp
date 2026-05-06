@@ -4,85 +4,32 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Selected Work | Montana Morgan</title>
-
-  <!-- Google Font -->
+  <meta property="og:title" content="Selected Work — S.T.A.S.I.S.">
+  <meta property="og:description" content="Proof-of-work highlights across esports competition, broadcast, and technical systems.">
+  <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap" rel="stylesheet">
-
+  <link rel="stylesheet" href="style.css">
+  <script src="components.js" defer></script>
   <style>
-    :root{
-      --primary:#60a5fa;
-      --accent:#3b82f6;
-      --highlight:#93c5fd;
-      --text:#d1d5db;
-      --muted:#9ca3af;
-      --panel:#1f2937;
-      --panel2:#111827;
-      --border:#3b82f6;
-    }
-
-    body{
-      margin:0;
-      font-family:'Teko', sans-serif;
-      background: linear-gradient(to bottom, #000000, #1a1a1a);
-      color: var(--text);
-      text-align:center;
-    }
-
-	:root{
-  	--primary:#60a5fa;
-  	--muted:#9ca3af;
-	}
     .container{
       max-width: 1100px;
       margin: 0 auto;
       padding: 60px 20px;
     }
-
-    header{
-      margin-bottom: 30px;
-    }
-
+    header{ margin-bottom: 30px; }
     h1{
       font-size: 4rem;
       color: var(--primary);
       margin: 0 0 10px;
       letter-spacing: .5px;
     }
-
     .subhead{
       font-size: 1.6rem;
       color: var(--muted);
       margin: 0 0 22px;
     }
-
-    nav{
-      display:flex;
-      justify-content:center;
-      gap:12px;
-      flex-wrap:wrap;
-      margin: 22px 0 10px;
-    }
-
-    .btn{
-      display:inline-block;
-      border: 1px solid var(--border);
-      color: var(--primary);
-      padding: 10px 18px;
-      border-radius: 10px;
-      text-decoration:none;
-      font-size: 1.25rem;
-      transition: background .2s ease, box-shadow .2s ease, color .2s ease;
-      background: transparent;
-    }
-
-    .btn:hover{
-      background: var(--accent);
-      color: white;
-      box-shadow: 0 0 16px rgba(96,165,250,.35);
-    }
-
     .panel{
       background: rgba(17,24,39,.35);
       border: 1px solid rgba(59,130,246,.55);
@@ -90,7 +37,6 @@
       padding: 18px;
       text-align:left;
     }
-
     .controls{
       display:flex;
       gap:12px;
@@ -99,14 +45,12 @@
       justify-content:space-between;
       margin: 28px 0 10px;
     }
-
     .searchRow{
       display:flex;
       gap:10px;
       flex-wrap:wrap;
       width:100%;
     }
-
     input, select{
       background: #0f172a;
       color: var(--text);
@@ -119,19 +63,16 @@
       flex: 1;
       min-width: 220px;
     }
-
     input:focus, select:focus{
       box-shadow: 0 0 10px rgba(96,165,250,.35);
       border-color: var(--primary);
     }
-
     .tags{
       display:flex;
       flex-wrap:wrap;
       gap:8px;
       margin-top: 12px;
     }
-
     .tag{
       border: 1px solid var(--border);
       color: var(--primary);
@@ -147,14 +88,12 @@
       background: var(--accent);
       color: white;
     }
-
     .grid{
       display:grid;
       grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
       gap: 18px;
       margin-top: 18px;
     }
-
     .card{
       background: var(--panel);
       border: 1px solid var(--border);
@@ -165,12 +104,10 @@
       position:relative;
       overflow:hidden;
     }
-
     .card:hover{
       transform: translateY(-2px);
       box-shadow: 0 0 18px rgba(96,165,250,.35);
     }
-
     .kicker{
       color: var(--highlight);
       font-size: 1.1rem;
@@ -178,7 +115,6 @@
       text-transform: uppercase;
       margin-bottom: 8px;
     }
-
     .titleRow{
       display:flex;
       align-items:flex-start;
@@ -186,21 +122,18 @@
       gap:12px;
       margin-bottom: 10px;
     }
-
     .card h2{
       color: var(--primary);
       font-size: 1.9rem;
       margin: 0;
       line-height: 1.05;
     }
-
     .year{
       color: var(--muted);
       font-size: 1.2rem;
       white-space:nowrap;
       margin-top: 3px;
     }
-
     .spec{
       list-style:none;
       padding:0;
@@ -215,7 +148,6 @@
       color: var(--highlight);
       font-weight: 600;
     }
-
     .cardFooter{
       margin-top: 14px;
       display:flex;
@@ -223,7 +155,6 @@
       flex-wrap:wrap;
       align-items:center;
     }
-
     .chip{
       font-size: 1.0rem;
       color: var(--muted);
@@ -232,7 +163,6 @@
       border-radius: 999px;
       background: rgba(15,23,42,.35);
     }
-
     .link{
       margin-left:auto;
       color: var(--primary);
@@ -248,60 +178,12 @@
       color: white;
       box-shadow: 0 0 14px rgba(96,165,250,.35);
     }
-
     .metaNote{
       margin-top: 18px;
       color: var(--muted);
       font-size: 1.15rem;
       text-align:left;
     }
-
-    footer{
-      margin-top: 70px;
-      padding: 40px 20px;
-      background-color: #111;
-      color: var(--muted);
-      font-size: 1rem;
-      text-align: center;
-      border-top: 1px solid #3f3f46;
-    }
-    .footer-logo{
-      max-width: 150px;
-      margin: 0 auto 10px;
-      filter: drop-shadow(0 0 12px rgba(96,165,250,.12));
-    }
-    .social-icons{
-      margin: 18px 0 10px;
-    }
-    .social-icons a{
-      margin: 0 10px;
-      display:inline-block;
-      width: 30px;
-      height: 30px;
-      filter: invert(59%) sepia(18%) saturate(1632%) hue-rotate(179deg) brightness(92%) contrast(86%);
-    }
-    .social-icons img{ width:100%; height:auto; }
-    .contact-info{
-      margin-top: 6px;
-      color: var(--muted);
-    }
-    .contact-info a{
-      color: var(--primary);
-      text-decoration: none;
-    }
-    .contact-info a:hover{ text-decoration: underline; }
-    .footer-note{
-      font-size: .8rem;
-      color: #6b7280;
-      margin-top: 10px;
-    }
-
-    @media (max-width: 860px){
-      .span-6{ grid-column: span 12; }
-      .hero h1{ font-size: 2.7rem; }
-      .site-name{ font-size: 2.8rem; }
-    }
-
     .mutedLink{
       color: var(--primary);
       text-decoration:none;
@@ -314,13 +196,9 @@
     <header>
       <h1>Selected Work</h1>
       <p class="subhead">Proof-of-work highlights across competition, broadcast, and technical systems.</p>
-
-      <nav>
-        <a class="btn" href="index.html">Home</a>
-        <a class="btn" href="archives.html">Archives</a>
-        <a class="btn" href="contact.html">Contact</a>
-      </nav>
     </header>
+
+    <div id="site-nav"></div>
 
     <section class="panel" aria-label="Filters">
       <div class="searchRow">
@@ -342,7 +220,7 @@
       </div>
 
       <div class="controls">
-        <a class="btn" href="#" id="clearBtn">Clear Filters</a>
+        <a class="button" href="#" id="clearBtn">Clear Filters</a>
         <div class="metaNote" id="countNote">Showing 0 items</div>
       </div>
     </section>
@@ -354,23 +232,9 @@
     </p>
   </div>
 
-  <footer>
-    <img src="logo.png" alt="S.T.A.S.I.S. Logo" class="footer-logo">
-    <div class="social-icons">
-      <a href="#"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" alt="TikTok"></a>
-      <a href="#"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram"></a>
-      <a href="#"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" alt="X"></a>
-      <a href="#"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="YouTube"></a>
-    </div>
-    <div class="contact-info">
-      <p>Email: <a href="mailto:2024mmorgan@gmail.com">2024mmorgan@gmail.com</a></p>
-      <p>Phone: <a href="tel:+16414810176">(641) 481-0176</a></p>
-    </div>
-    <p class="footer-note">© 2025</p>
-  </footer>
+  <div id="site-footer"></div>
 
   <script>
-    // Selected work data (spec-style). Replace/expand as you add case studies.
     const WORK = [
       {
         title: "Collegiate Recruitment Tournament — MCC Esports",
@@ -483,7 +347,7 @@
       items.sort((a,b) => {
         if(sort === "title") return a.title.localeCompare(b.title);
         if(sort === "oldest") return a.year - b.year;
-        return b.year - a.year; // newest
+        return b.year - a.year;
       });
 
       renderCards(items);
